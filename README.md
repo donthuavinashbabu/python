@@ -2,4 +2,4 @@
 
 ---
 ## Basics
-* [Hello World](basics\helloWorld.ipynb)
+* [Hello World](basics/helloWorld.ipynb)
