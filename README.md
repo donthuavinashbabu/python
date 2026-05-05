@@ -1,2 +1,5 @@
-# Welcome to Book
-* [Table of Contents](book/README.md)
+# Welcome to Python Practice
+
+---
+## Basics
+* [Hello World](basics\helloWorld.ipynb)
