@@ -101,7 +101,7 @@ str2 = str1.upper()
 ```
 str1 = "hello world"
 # ["hello", "world"]. Default on white space
-str2 = str1.spli()
+str2 = str1.split()
 str3 = str1.split("o") # split by o
 ```
 * format
