@@ -35,7 +35,7 @@
 * str - Can you both single quote or double quote
 * bool
 * list
-* set
+* set - unordered unique elements
 * tup - Tuples. ordered `immutable` sequence of objects. Ex: (10, "hello", 123.456)
 * dict - Dictionaries. unordered key-value pairs. Similar to `HashMap`. Ex: {"key1": "value1", "key2": "value2"}
 * Python supports `Dynamic Typing`, means we can reassign variables to different data types. Example below
