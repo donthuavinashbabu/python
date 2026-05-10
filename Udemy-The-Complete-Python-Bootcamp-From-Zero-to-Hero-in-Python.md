@@ -2,7 +2,7 @@
 * [slides](https://drive.google.com/drive/folders/1xzX9OGucdIrMWVGeMwifNyttcjds81x1?usp=sharing)
 
 ---
-# Course content
+# Course content
 * Introduction
 * Python 2 vs Pytho 3
 * Python setup - Environment selection, Jupytor notebook selection
@@ -36,8 +36,8 @@
 * bool
 * list
 * set
-* dict - Dictionaries. unordered key-value pairs. Similar to `HashMap`. Ex: {"key1": "value1", "key2": "value2"}
 * tup - Tuples. ordered `immutable` sequence of objects. Ex: (10, "hello", 123.456)
+* dict - Dictionaries. unordered key-value pairs. Similar to `HashMap`. Ex: {"key1": "value1", "key2": "value2"}
 * Python supports `Dynamic Typing`, means we can reassign variables to different data types. Example below
 ```
 my_dog = 2
