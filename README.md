@@ -5,3 +5,6 @@
 ---
 ## Example and Practice
 * [Hello World](basics/helloWorld.ipynb)
+* [Conditions](basics/conditions.ipynb)
+* [Loops](basics/loops.ipynb)
+* [File IO](basics/fileIO.ipynb)
