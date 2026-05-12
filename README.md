@@ -3,6 +3,17 @@
 * [Notes](notes.md)
 * [Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python](Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md)
 ---
+# Practice
+* Basic Practice: http://codingbat.com/python
+* More Mathematical (and Harder) Practice: https://projecteuler.net/archives
+* List of Practice Problems: http://www.codeabbey.com/index/task_list
+* A SubReddit Devoted to Daily Practice Problems: https://www.reddit.com/r/dailyprogrammer
+* A very tricky website with very few hints and touch problems (Not for beginners but still interesting) - http://www.pythonchallenge.com/
+---
+# No install python labs
+* https://colab.research.google.com/
+* https://jupyter.org/try
+---
 ## Example and Practice
 * [Hello World](basics/helloWorld.ipynb)
 * [Conditions](basics/conditions.ipynb)
