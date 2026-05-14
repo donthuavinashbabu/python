@@ -6,9 +6,9 @@
 * Introduction
 * Python 2 vs Pytho 3
 * Python setup - Environment selection, Jupytor notebook selection
-* data structures - numbers, strings, lists, dictionaries, tuples, files, sets, boolean
+* data structures - numbers, strings, lists, tuples, sets, dictionaries, boolean, files
 * Comparison operators
-* Python statements - if, for, while, range, list comparison
+* Python statements - if, else, elif, for, while, range, list comparison
 * Methods and functions
 * First milestone project
 * OOP - classes, object, methods, inheritance
@@ -35,8 +35,8 @@
 * str - Can you both single quote or double quote
 * bool
 * list
-* set - unordered unique elements
 * tup - Tuples. ordered `immutable` sequence of objects. Ex: (10, "hello", 123.456)
+* set - unordered unique elements
 * dict - Dictionaries. unordered key-value pairs. Similar to `HashMap`. Ex: {"key1": "value1", "key2": "value2"}
 * Python supports `Dynamic Typing`, means we can reassign variables to different data types. Example below
 ```
