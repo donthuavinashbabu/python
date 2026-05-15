@@ -20,3 +20,4 @@
 * [Loops](basics/loops.ipynb)
 * [File IO](basics/fileIO.ipynb)
 * [Methods and Functions](basics/methodsFunctions.ipynb)
+* [Lists](basics/lists.ipynb)
