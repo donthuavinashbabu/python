@@ -21,3 +21,4 @@
 * [File IO](basics/fileIO.ipynb)
 * [Methods and Functions](basics/methodsFunctions.ipynb)
 * [Lists](basics/lists.ipynb)
+* [Practice Examples](basics/practice.ipynb)
