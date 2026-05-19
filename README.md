@@ -22,3 +22,5 @@
 * [Methods and Functions](basics/methodsFunctions.ipynb)
 * [Lists](basics/lists.ipynb)
 * [Practice Examples](basics/practice.ipynb)
+* [Oops concepts](basics/oop.ipynb)
+* [Practice Examples](basics/practice-2.ipynb)
