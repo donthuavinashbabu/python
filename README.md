@@ -24,3 +24,5 @@
 * [Practice Examples](basics/practice.ipynb)
 * [Oops concepts](basics/oop.ipynb)
 * [Practice Examples](basics/practice-2.ipynb)
+* [Python Package Index](basics/pypi-python-package-index.ipynb)
+* [Packages and Modules](packages-modules/README.md)
