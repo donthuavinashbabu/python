@@ -35,9 +35,23 @@ def try_finally():
         sum = 10 + 10
     finally:
         print("try_finally- finally block")
+
+def ask_for_input():
+    while True:
+        try:
+            number = int(input("Enter number: "))
+        except:
+            print("Not a number, try again")
+            continue
+        else:
+            print(f"Entered number: {number}")
+            break
+        finally:
+            print("Finally executed")
         
 if __name__ == "__main__":
     # try_except()
     # try_except_else()
     # separate_except_blocks()
-    try_finally()
+    # try_finally()
+    ask_for_input()
