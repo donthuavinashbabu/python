@@ -27,6 +27,7 @@
 * [Python Package Index](basics/pypi-python-package-index.ipynb)
 * [Packages and Modules](packages-modules/README.md)
 * [Error and Exception Handling](error-exception-handling/README.md)
+* [Unit Testing](unit-testing/README.md)
 ---
 # main function
 * Files:
