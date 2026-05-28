@@ -26,6 +26,7 @@
 * [Practice Examples](basics/practice-2.ipynb)
 * [Python Package Index](basics/pypi-python-package-index.ipynb)
 * [Packages and Modules](packages-modules/README.md)
+* [Error and Exception Handling](error-exception-handling/README.md)
 ---
 # main function
 * Files:
