@@ -1,10 +1,9 @@
-# Python notes
-
+# Welcome to Python
+* [Materials](materials.md)
+---
+# Notes
 * [Notes](notes.md)
 * [Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python](Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md)
----
-# Materials
-* [Materials](materials.md)
 ---
 # Practice
 * Basic Practice: http://codingbat.com/python
