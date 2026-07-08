@@ -8,11 +8,12 @@ A virtual environment is an isolated Python environment that allows you to manag
 * Simplifies Project Management: Makes it easier to manage and replicate project-specific setups.
 * Prevents System Interference: Avoids accidentally modifying or breaking the global Python environment.
 * Enables Reproducibility: Ensures consistent behavior across development, testing and deployment environments.
-* When and Where to use a Virtual Environment?
+
+## When and Where to use a Virtual Environment?
 * A virtual environment should be used for every Python project. By default, all Python projects share the same location to store packages. This can cause problems if two projects need different versions of the same package, like Django. A virtual environment solves this by creating a separate space for each project’s packages, so they don’t interfere with each other. It’s basically a folder with its own Python setup. Using a virtual environment helps avoid conflicts and keeps your projects clean and organized.
 
 ## How to Create a Virtual Environment in Python
-* We use the virtualenv module to create isolated environments. It creates a folder with all necessary executables for the project.
+* We use the `virtualenv` module to create isolated environments. It creates a folder with all necessary executables for the project.
 
 ---
 * A virtual environment is an isolated Python installation for a project. Packages installed with `pip` while the environment is active stay inside that project folder instead of affecting your system Python.
@@ -152,14 +153,10 @@ virtualenv myenv
 ```
 
 ---
-## difference between `venv` and `virtualenv`
-Use venv if you’re working with Python 3.3+ — it’s built-in, simple, and requires no installation. Use virtualenv if you need compatibility with Python 2, faster environment creation, or advanced features. For most modern projects, venv is the recommended choice.
-
-# 🔑 Key Differences Between `venv` and `virtualenv`
-
-**Use `venv` if you’re working with Python 3.3+ — it’s built-in, simple, and requires no installation.  
-Use `virtualenv` if you need compatibility with Python 2, faster environment creation, or advanced features.  
-For most modern projects, `venv` is the recommended choice.**
+## Key Differences Between venv and virtualenv
+- Use `venv` if you’re working with Python 3.3+ — it’s built-in, simple, and requires no installation.  
+- Use `virtualenv` if you need compatibility with Python 2, faster environment creation, or advanced features.  
+- For most modern projects, `venv` is the recommended choice.**
 
 ## 📊 Comparison Table
 
@@ -170,12 +167,12 @@ For most modern projects, `venv` is the recommended choice.**
 | **Speed** | Slightly slower (installs pip from embedded wheel) | Faster (caches pip wheels, optimized creation) |
 | **Flexibility** | Basic isolation only | More configurable, supports plugins and wrappers |
 | **Use Case** | Standard choice for modern Python projects | Legacy projects, CI/CD pipelines needing speed, or when plugins are required |
-| **Command Example** | `python -m venv myenv` | `virtualenv myenv` |
+| **Command Example** | `python -m venv myenv` | `pip install virtualenv` then `virtualenv myenv` |
 
 ## 📌 Practical Guidance
 - **For new projects (Python 3.3+)** → Use **`venv`**.  
 - **For legacy projects (Python 2)** → Use **`virtualenv`**.  
-- **For CI/CD or rapid environment creation** → `virtualenv` may be faster, but modern alternatives like **uv** or **Poetry** are even better.  
+- **For CI/CD or rapid environment creation** → `virtualenv` may be faster, but modern alternatives like `uv` or `Poetry` are even better.  
 - **For dependency management** → Pair `venv` with tools like **pip-tools**, **Poetry**, or **PDM**.  
 
 ## ⚠️ Risks & Trade-offs
@@ -184,8 +181,8 @@ For most modern projects, `venv` is the recommended choice.**
 - **Mixing environments** → Avoid switching between `venv` and `virtualenv` in the same project.  
 
 ## ✅ Recommendation
-Since you’re working with **modern Python (3.x)**, use **`venv`** for simplicity and standardization.  
-Reserve **`virtualenv`** only for older projects or specialized workflows.
+Working with modern Python (3.x) then use `venv` for simplicity and standardization.  
+Reserve `virtualenv` only for older projects or specialized workflows.
 
 ---
 ## Difference between venv, virtualenv and poetry
@@ -219,7 +216,7 @@ Reserve **`virtualenv`** only for older projects or specialized workflows.
 
 ## 🚀 Step-by-Step Workflow with Poetry
 
-### Poetry is a modern tool for managing **virtual environments, dependencies, and publishing** in Python projects.
+Poetry is a modern tool for managing **virtual environments, dependencies, and publishing** in Python projects.
 
 - Install Poetry
 ```
@@ -239,6 +236,10 @@ poetry init
 ```
 poetry add requests
 poetry add flask
+
+or
+
+poetry add requests flask
 ```
 
 - Create & Activate Virtual Environment
@@ -248,12 +249,59 @@ poetry add flask
 ```
 poetry shell
 ```
+- `poetry shell` is not deprecated. use below command which shows the path to activate, run that manually
+```
+poetry env activate
+```
 
 - Install Dependencies
 - Installs all dependencies listed in `pyproject.toml`
 - Uses `poetry.lock` to ensure consistent versions
 ```
 poetry install
+```
+- If you get below error then follow steps below
+```
+poetry install
+Installing dependencies from lock file
+
+No dependencies to install or update
+
+Installing the current project: practice-1 (0.1.0)
+Error: The current project could not be installed: No file/folder found for package practice-1
+If you do not want to install the current project use --no-root.
+If you want to use Poetry only for dependency management but not for packaging, you can disable package mode by setting package-mode = false in your pyproject.toml file.
+If you did intend to install the current project, you may need to set `packages` in your pyproject.toml file.
+```
+- create folder (like `practice-1`) with package name in `pyproject.toml`. Add `__init__.py`. Following is sample `pyproject.toml`
+```
+[project]
+name = "practice-1"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your name",email = "your-email@gmail.com"}
+]
+requires-python = ">=3.14"
+dependencies = [
+    "requests (>=2.34.2,<3.0.0)",
+    "flask (>=3.1.3,<4.0.0)"
+]
+
+packages = [
+    { include = "practice_1" }
+]
+
+# package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+```
+
+- create `app.py`
+```
+print("Hello World")
 ```
 
 - Run Your Project
