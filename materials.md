@@ -4,7 +4,7 @@
 * https://www.geeksforgeeks.org/python/introduction-to-python/
 * [Python documentation](https://docs.python.org/3/)
 
-## python virtual environment
+## Python virtual environment
 * https://www.w3schools.com/python/python_virtualenv.asp
 * http://docs.python.org/3/library/venv.html
 * https://www.geeksforgeeks.org/python/python-virtual-environment/
