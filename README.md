@@ -25,10 +25,8 @@
 * https://colab.research.google.com/
 * https://jupyter.org/try
 ---
-## Practice
-* [Practice 1](practice_001.ipynb)
----
 ## Example and Practice
+* [Practice 1](practice_001.ipynb)
 * [Hello World](basics/helloWorld.ipynb)
 * [Conditions](basics/conditions.ipynb)
 * [Loops](basics/loops.ipynb)

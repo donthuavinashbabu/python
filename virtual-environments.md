@@ -249,7 +249,7 @@ poetry add requests flask
 ```
 poetry shell
 ```
-- `poetry shell` is not deprecated. use below command which shows the path to activate, run that manually
+- `poetry shell` is now deprecated. use below command which shows the path to activate, run that manually
 ```
 poetry env activate
 ```
@@ -273,7 +273,7 @@ If you do not want to install the current project use --no-root.
 If you want to use Poetry only for dependency management but not for packaging, you can disable package mode by setting package-mode = false in your pyproject.toml file.
 If you did intend to install the current project, you may need to set `packages` in your pyproject.toml file.
 ```
-- create folder (like `practice-1`) with package name in `pyproject.toml`. Add `__init__.py`. Following is sample `pyproject.toml`
+- create folder (like `practice_1`) with package name in `pyproject.toml`. Add `__init__.py`. Following is sample `pyproject.toml`
 ```
 [project]
 name = "practice-1"
