@@ -28,6 +28,7 @@
 * [Unit Testing](unit-testing/README.md)
 * [Decorators](decorators/README.md)
 * [Main Function](main-function.md)
+* [colorama package](colorama-package.png)
 ---
 # POCs todo
 * [POCs](pocs.md)

@@ -30,7 +30,7 @@ I am an animal
   * `sub_package_1.sub_report1()`
   * `sub_report2()`
 * `sub_report2` can be imported directly from `SubPackage1` because it is re-exported in `SubPackage1/__init__.py`.
-* If `sub_report2` is not re-exported in `SubPackage1/__init__.py`, import it directly from the module:
+* If `sub_report2` is now re-exported in `SubPackage1/__init__.py`, import it directly from the module:
   * `from MainPackage.SubPackage1.sub_package_1 import sub_report2`
 * Common `ImportError` checks:
   * Run the command from the `packages-modules` directory so `MainPackage` is on Python path.
