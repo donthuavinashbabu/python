@@ -1,21 +1,21 @@
 # Welcome to Python
-* **Live docs (GitHub Pages):** [https://donthuavinashbabu.github.io/python/](https://donthuavinashbabu.github.io/python/)
-* Local docs: open [docs/index.html](docs/index.html) in a browser
+* **Open docs in browser:** [https://donthuavinashbabu.github.io/python/](https://donthuavinashbabu.github.io/python/)
+* **Local only:** open `docs/index.html` from your clone (double-click or drag into a browser)
+
+> Clicking `docs/index.html` in the GitHub repo always shows **source code**. GitHub does not render HTML there. To open the real page, enable Pages below and use the link above.
 
 ### Enable GitHub Pages (one-time)
 1. Push this repo to GitHub
 2. **Settings → Pages → Build and deployment**
 3. Source: **Deploy from a branch**
 4. Branch: **main**, folder: **/docs** → Save
-5. After a minute, open `https://donthuavinashbabu.github.io/python/`
-
-> GitHub’s file browser does not render HTML. Use Pages (above) to view the documentation site.
+5. After a minute, open [https://donthuavinashbabu.github.io/python/](https://donthuavinashbabu.github.io/python/)
 
 ---
 
 ## Documentation TOC
 
-Mirrors the [HTML docs](docs/index.html) menu. Browse topics on GitHub via the links below.
+Mirrors the [HTML docs site](https://donthuavinashbabu.github.io/python/) menu. Browse topics on GitHub via the links below.
 
 ### Start
 * [Materials](materials.md)
