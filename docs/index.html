@@ -27,6 +27,7 @@
             <li><a href="#home" class="nav-link active" data-page="home">Overview</a></li>
             <li><a href="#materials" class="nav-link" data-page="materials">Materials</a></li>
             <li><a href="#notes" class="nav-link" data-page="notes">Notes</a></li>
+            <li><a href="#udemy-bootcamp" class="nav-link" data-page="udemy-bootcamp">Udemy Bootcamp Notes</a></li>
             <li><a href="#virtual-environments" class="nav-link" data-page="virtual-environments">Virtual Environments</a></li>
           </ul>
         </div>
@@ -44,6 +45,7 @@
             <li><a href="#decorators" class="nav-link" data-page="decorators">Decorators</a></li>
             <li><a href="#main-function" class="nav-link" data-page="main-function">Main Function</a></li>
             <li><a href="#pypi" class="nav-link" data-page="pypi">PyPI &amp; Packages</a></li>
+            <li><a href="#colorama" class="nav-link" data-page="colorama">Colorama Package</a></li>
           </ul>
         </div>
 
@@ -131,7 +133,11 @@
         <section class="section">
           <h3>Python</h3>
           <ul class="ext-links">
-            <li>Udemy — The Complete Python Bootcamp From Zero to Hero in Python</li>
+            <li>Udemy — The Complete Python Bootcamp From Zero to Hero in Python (
+              <a href="../Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md">notes</a>
+              ·
+              <a href="#udemy-bootcamp" class="goto" data-page="udemy-bootcamp">docs page</a>
+            )</li>
             <li><a href="https://www.w3schools.com/python/default.asp" target="_blank" rel="noopener">W3Schools Python</a></li>
             <li><a href="https://www.geeksforgeeks.org/python/introduction-to-python/" target="_blank" rel="noopener">GeeksforGeeks — Introduction to Python</a></li>
             <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener">Official Python documentation</a></li>
@@ -179,7 +185,38 @@
           <div class="file-links">
             <a class="file-link notebook-link" href="../virtual-environments.md">virtual-environments.md</a>
             <a class="file-link notebook-link" href="../main-function.md">main-function.md</a>
-            <a class="file-link notebook-link" href="../colorama-package.png">colorama package</a>
+            <a class="file-link notebook-link" href="../Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md">Udemy bootcamp notes</a>
+            <a class="file-link notebook-link goto" href="#colorama" data-page="colorama">colorama package</a>
+          </div>
+        </section>
+      </article>
+
+      <!-- Udemy Bootcamp -->
+      <article class="page" id="page-udemy-bootcamp">
+        <header class="page-header">
+          <h2>Udemy Bootcamp Notes</h2>
+          <p>Notes from <em>The Complete Python Bootcamp From Zero to Hero in Python</em>.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md">Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md</a>
+          </div>
+          <h3>Course content overview</h3>
+          <ul>
+            <li>Introduction, Python 2 vs 3, setup / Jupyter</li>
+            <li>Data structures — numbers, strings, lists, tuples, sets, dictionaries, files</li>
+            <li>Comparison operators and statements (<code>if</code>, loops, <code>range</code>)</li>
+            <li>Methods and functions; milestone projects</li>
+            <li>OOP, errors/exceptions, modules and packages</li>
+            <li>Built-ins (<code>map</code>, <code>filter</code>, <code>zip</code>, …), decorators, generators</li>
+            <li>Capstone and advanced modules</li>
+          </ul>
+          <p>
+            Slides:
+            <a href="https://drive.google.com/drive/folders/1xzX9OGucdIrMWVGeMwifNyttcjds81x1?usp=sharing" target="_blank" rel="noopener">Google Drive folder</a>
+          </p>
+          <div class="note">
+            Full typed notes (data types, strings, and more) are in the markdown file linked above.
           </div>
         </section>
       </article>
@@ -535,11 +572,41 @@ if __name__ == "__main__":
         <section class="section">
           <div class="file-links">
             <a class="file-link notebook-link" href="../pypi-python-package-index.ipynb">pypi-python-package-index.ipynb</a>
-            <a class="file-link notebook-link" href="../colorama-package.png">colorama package</a>
           </div>
           <ul class="ext-links">
             <li><a href="https://pypi.org/" target="_blank" rel="noopener">pypi.org</a></li>
             <li><a href="https://python-poetry.org/docs/" target="_blank" rel="noopener">Poetry docs</a> for project dependency management</li>
+            <li><a href="#colorama" class="goto" data-page="colorama">Colorama package</a> example</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Colorama -->
+      <article class="page" id="page-colorama">
+        <header class="page-header">
+          <h2>Colorama Package</h2>
+          <p>Print colored text in the Windows (and cross-platform) terminal using <code>colorama</code>.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../colorama-package.png">colorama-package.png</a>
+          </div>
+          <h3>Install</h3>
+<pre><code>pip install colorama</code></pre>
+          <h3>Basic usage</h3>
+<pre><code>from colorama import init, Fore
+
+init()
+print(Fore.RED + "Some text in red color")
+print(Fore.BLUE + "Some text in blue color")
+print(Fore.GREEN + "Some text in green color")</code></pre>
+          <p>Call <code>init()</code> once so ANSI color codes work correctly on Windows terminals.</p>
+          <h3>Session screenshot</h3>
+          <p>
+            <img src="../colorama-package.png" alt="colorama package demo in terminal" style="max-width:100%; border-radius:8px; border:1px solid var(--border);" />
+          </p>
+          <ul class="ext-links">
+            <li><a href="https://pypi.org/project/colorama/" target="_blank" rel="noopener">colorama on PyPI</a></li>
           </ul>
         </section>
       </article>
