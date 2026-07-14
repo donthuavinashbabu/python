@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python Study Notes — Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Outfit:wght@400;500;600;650&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu">Menu</button>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <h1>Python Study</h1>
+        <p>Notes, examples &amp; practice</p>
+      </div>
+
+      <nav aria-label="Documentation">
+        <div class="nav-group">
+          <div class="nav-group-title">Start</div>
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active" data-page="home">Overview</a></li>
+            <li><a href="#materials" class="nav-link" data-page="materials">Materials</a></li>
+            <li><a href="#notes" class="nav-link" data-page="notes">Notes</a></li>
+            <li><a href="#virtual-environments" class="nav-link" data-page="virtual-environments">Virtual Environments</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">Topics</div>
+          <ul class="nav-list">
+            <li><a href="#practice" class="nav-link" data-page="practice">Practice Notebooks</a></li>
+            <li><a href="#file-io" class="nav-link" data-page="file-io">File IO</a></li>
+            <li><a href="#methods-functions" class="nav-link" data-page="methods-functions">Methods &amp; Functions</a></li>
+            <li><a href="#oop" class="nav-link" data-page="oop">OOP Concepts</a></li>
+            <li><a href="#packages" class="nav-link" data-page="packages">Packages &amp; Modules</a></li>
+            <li><a href="#errors" class="nav-link" data-page="errors">Error Handling</a></li>
+            <li><a href="#unit-testing" class="nav-link" data-page="unit-testing">Unit Testing</a></li>
+            <li><a href="#decorators" class="nav-link" data-page="decorators">Decorators</a></li>
+            <li><a href="#main-function" class="nav-link" data-page="main-function">Main Function</a></li>
+            <li><a href="#pypi" class="nav-link" data-page="pypi">PyPI &amp; Packages</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title">More</div>
+          <ul class="nav-list">
+            <li><a href="#practice-sites" class="nav-link" data-page="practice-sites">Practice Sites</a></li>
+            <li><a href="#labs" class="nav-link" data-page="labs">No-Install Labs</a></li>
+            <li><a href="#pocs" class="nav-link" data-page="pocs">POCs Todo</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        Source in repo root ·
+        <a href="../README.md">README.md</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- Home -->
+      <article class="page active" id="page-home">
+        <header class="page-header">
+          <h2>Overview</h2>
+          <p>Documentation for this Python learning repo — examples, notebooks, and notes from study and practice.</p>
+        </header>
+
+        <section class="section">
+          <div class="note">
+            <strong>On GitHub:</strong> open this site via
+            <a href="https://donthuavinashbabu.github.io/python/">GitHub Pages</a>
+            (Repo → Settings → Pages → Deploy from branch → <code>main</code> / <code>/docs</code>).
+            Clicking <code>docs/index.html</code> in the repo shows source only — it does not run as a page.
+          </div>
+          <h3>What’s in this project</h3>
+          <p>Runnable scripts, Jupyter notebooks, and markdown notes covering core Python topics: packages, errors, testing, decorators, and more.</p>
+          <div class="card-grid">
+            <div class="card">
+              <a href="#decorators" class="goto" data-page="decorators">Decorators</a>
+              <p>Functions as first-class objects and <code>@</code> syntax.</p>
+            </div>
+            <div class="card">
+              <a href="#errors" class="goto" data-page="errors">Error Handling</a>
+              <p>try / except / else / finally patterns.</p>
+            </div>
+            <div class="card">
+              <a href="#unit-testing" class="goto" data-page="unit-testing">Unit Testing</a>
+              <p>pylint and unittest examples.</p>
+            </div>
+            <div class="card">
+              <a href="#packages" class="goto" data-page="packages">Packages</a>
+              <p>Modules, packages, and imports.</p>
+            </div>
+            <div class="card">
+              <a href="#practice" class="goto" data-page="practice">Notebooks</a>
+              <p>File IO, OOP, methods, and more.</p>
+            </div>
+            <div class="card">
+              <a href="#virtual-environments" class="goto" data-page="virtual-environments">Virtual Env</a>
+              <p>venv, virtualenv, Poetry, and uv.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Key source files</h3>
+          <div class="file-links">
+            <a class="file-link" href="../decorators/decorators.py">decorators.py</a>
+            <a class="file-link" href="../error-exception-handling/error_exception_handling.py">error_exception_handling.py</a>
+            <a class="file-link" href="../unit-testing/test_cap.py">test_cap.py</a>
+            <a class="file-link" href="../packages-modules/use_packages.py">use_packages.py</a>
+            <a class="file-link" href="../main_function.py">main_function.py</a>
+            <a class="file-link notebook-link" href="../fileIO.ipynb">fileIO.ipynb</a>
+            <a class="file-link notebook-link" href="../oop.ipynb">oop.ipynb</a>
+          </div>
+        </section>
+      </article>
+
+      <!-- Materials -->
+      <article class="page" id="page-materials">
+        <header class="page-header">
+          <h2>Materials</h2>
+          <p>Courses, references, and docs used while learning Python.</p>
+        </header>
+        <section class="section">
+          <h3>Python</h3>
+          <ul class="ext-links">
+            <li>Udemy — The Complete Python Bootcamp From Zero to Hero in Python</li>
+            <li><a href="https://www.w3schools.com/python/default.asp" target="_blank" rel="noopener">W3Schools Python</a></li>
+            <li><a href="https://www.geeksforgeeks.org/python/introduction-to-python/" target="_blank" rel="noopener">GeeksforGeeks — Introduction to Python</a></li>
+            <li><a href="https://docs.python.org/3/" target="_blank" rel="noopener">Official Python documentation</a></li>
+          </ul>
+          <p>Course notes:
+            <a href="../Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md">Udemy bootcamp notes</a>
+            ·
+            <a href="../materials.md">materials.md</a>
+          </p>
+        </section>
+        <section class="section">
+          <h3>Virtual environment</h3>
+          <ul class="ext-links">
+            <li><a href="https://www.w3schools.com/python/python_virtualenv.asp" target="_blank" rel="noopener">W3Schools — Virtualenv</a></li>
+            <li><a href="https://docs.python.org/3/library/venv.html" target="_blank" rel="noopener">docs.python.org — venv</a></li>
+            <li><a href="https://www.geeksforgeeks.org/python/python-virtual-environment/" target="_blank" rel="noopener">GeeksforGeeks — Virtual environment</a></li>
+          </ul>
+        </section>
+        <section class="section">
+          <h3>FastAPI &amp; Poetry</h3>
+          <ul class="ext-links">
+            <li><a href="https://www.tutorialspoint.com/fastapi/index.htm" target="_blank" rel="noopener">TutorialsPoint — FastAPI</a></li>
+            <li><a href="https://python-poetry.org/docs/" target="_blank" rel="noopener">Poetry documentation</a></li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Notes -->
+      <article class="page" id="page-notes">
+        <header class="page-header">
+          <h2>Notes</h2>
+          <p>Reference notes and tooling comparison.</p>
+        </header>
+        <section class="section">
+          <h3>Package managers</h3>
+          <p>Comparison of pip, Poetry, and uv:</p>
+          <p>
+            <a href="../notes.md">notes.md</a>
+            ·
+            <img src="../imgs/pip-vs-poetry-vs-uv.png" alt="pip vs poetry vs uv" style="max-width:100%; border-radius:8px; margin-top:0.75rem; border:1px solid var(--border);" />
+          </p>
+        </section>
+        <section class="section">
+          <h3>Related notes</h3>
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../virtual-environments.md">virtual-environments.md</a>
+            <a class="file-link notebook-link" href="../main-function.md">main-function.md</a>
+            <a class="file-link notebook-link" href="../colorama-package.png">colorama package</a>
+          </div>
+        </section>
+      </article>
+
+      <!-- Virtual Environments -->
+      <article class="page" id="page-virtual-environments">
+        <header class="page-header">
+          <h2>Virtual Environments</h2>
+          <p>Isolated Python environments so each project keeps its own dependencies.</p>
+        </header>
+        <section class="section">
+          <h3>Why use one</h3>
+          <ul>
+            <li>Avoid dependency version conflicts across projects</li>
+            <li>Isolate packages from system Python</li>
+            <li>Make setups reproducible across machines</li>
+          </ul>
+          <p>Full write-up: <a href="../virtual-environments.md">virtual-environments.md</a></p>
+        </section>
+        <section class="section">
+          <h3>Create &amp; activate (venv)</h3>
+<pre><code>python -m venv project-1
+cd project-1
+Scripts\activate          # Windows
+# source bin/activate     # macOS / Linux</code></pre>
+          <h4>Install &amp; run</h4>
+<pre><code>pip install cowsay
+py cowsay-test.py
+deactivate</code></pre>
+        </section>
+        <section class="section">
+          <h3>venv vs virtualenv vs Poetry</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>venv</code></td>
+                <td>Simple isolation (built into Python 3.3+)</td>
+              </tr>
+              <tr>
+                <td><code>virtualenv</code></td>
+                <td>Legacy / faster creation / extra options</td>
+              </tr>
+              <tr>
+                <td>Poetry</td>
+                <td>Environments + dependencies + publishing</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="note">
+            <strong>Tip:</strong> For most modern projects use <code>venv</code> or Poetry / uv. See the markdown note for Poetry workflow details.
+          </div>
+        </section>
+      </article>
+
+      <!-- Practice notebooks -->
+      <article class="page" id="page-practice">
+        <header class="page-header">
+          <h2>Practice Notebooks</h2>
+          <p>Jupyter notebooks for hands-on examples and drills.</p>
+        </header>
+        <section class="section">
+          <div class="card-grid">
+            <div class="card">
+              <a href="../practice_001.ipynb">Practice 1</a>
+              <p>General practice notebook.</p>
+            </div>
+            <div class="card">
+              <a href="../fileIO.ipynb">File IO</a>
+              <p>Reading and writing files.</p>
+            </div>
+            <div class="card">
+              <a href="../methodsFunctions.ipynb">Methods &amp; Functions</a>
+              <p>Defining and calling functions.</p>
+            </div>
+            <div class="card">
+              <a href="../oop.ipynb">OOP Concepts</a>
+              <p>Classes, instances, and OOP basics.</p>
+            </div>
+            <div class="card">
+              <a href="../pypi-python-package-index.ipynb">PyPI</a>
+              <p>Python Package Index notes.</p>
+            </div>
+          </div>
+          <p>Open these in Jupyter, VS Code, or <a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a>.</p>
+        </section>
+      </article>
+
+      <!-- File IO -->
+      <article class="page" id="page-file-io">
+        <header class="page-header">
+          <h2>File IO</h2>
+          <p>Reading from and writing to files in Python.</p>
+        </header>
+        <section class="section">
+          <p>Interactive examples live in the notebook:</p>
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../fileIO.ipynb">fileIO.ipynb</a>
+          </div>
+          <h3>Typical patterns</h3>
+<pre><code>with open("data.txt", "r", encoding="utf-8") as f:
+    content = f.read()
+
+with open("out.txt", "w", encoding="utf-8") as f:
+    f.write("hello")</code></pre>
+          <div class="note">
+            Prefer <code>with open(...)</code> so files close automatically, even if an error occurs.
+          </div>
+        </section>
+      </article>
+
+      <!-- Methods & Functions -->
+      <article class="page" id="page-methods-functions">
+        <header class="page-header">
+          <h2>Methods &amp; Functions</h2>
+          <p>How to define functions, pass arguments, and work with methods.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../methodsFunctions.ipynb">methodsFunctions.ipynb</a>
+            <a class="file-link" href="../main_function.py">main_function.py</a>
+          </div>
+          <p>See also <a href="#main-function" class="goto" data-page="main-function"><code>if __name__ == "__main__"</code></a> for script entry points.</p>
+        </section>
+      </article>
+
+      <!-- OOP -->
+      <article class="page" id="page-oop">
+        <header class="page-header">
+          <h2>OOP Concepts</h2>
+          <p>Object-oriented programming with classes and instances.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../oop.ipynb">oop.ipynb</a>
+            <a class="file-link" href="../packages-modules/animal.py">animal.py</a>
+            <a class="file-link" href="../packages-modules/dog.py">dog.py</a>
+          </div>
+          <p><code>animal.py</code> / <code>dog.py</code> show a simple module import related to class/module layout:</p>
+<pre><code># from packages-modules folder
+py dog.py
+# I am an animal</code></pre>
+        </section>
+      </article>
+
+      <!-- Packages -->
+      <article class="page" id="page-packages">
+        <header class="page-header">
+          <h2>Packages &amp; Modules</h2>
+          <p>Organizing code into modules and packages with imports.</p>
+        </header>
+        <section class="section">
+          <h3>Simple module import</h3>
+          <div class="file-links">
+            <a class="file-link" href="../packages-modules/animal.py">animal.py</a>
+            <a class="file-link" href="../packages-modules/dog.py">dog.py</a>
+            <a class="file-link notebook-link" href="../packages-modules/README.md">README.md</a>
+          </div>
+<pre><code>C:\...\packages-modules&gt; py dog.py
+I am an animal</code></pre>
+        </section>
+        <section class="section">
+          <h3>Package &amp; subpackage</h3>
+          <div class="file-links">
+            <a class="file-link" href="../packages-modules/use_packages.py">use_packages.py</a>
+            <a class="file-link" href="../packages-modules/MainPackage/main_package.py">main_package.py</a>
+            <a class="file-link" href="../packages-modules/MainPackage/SubPackage1/sub_package_1.py">sub_package_1.py</a>
+          </div>
+<pre><code>from MainPackage import main_package
+from MainPackage.SubPackage1 import sub_package_1, sub_report2
+
+main_package.main_report()
+sub_package_1.sub_report1()
+sub_report2()</code></pre>
+          <p><strong>Run</strong> (from <code>packages-modules</code>):</p>
+<pre><code>py use_packages.py</code></pre>
+          <p><strong>Expected output:</strong></p>
+<pre><code>I am MainPackage.main_report
+I am SubPackage1.sub_report1
+I am SubPackage1.sub_report2</code></pre>
+          <div class="note">
+            Run from the <code>packages-modules</code> directory so <code>MainPackage</code> is on the Python path. Ensure <code>__init__.py</code> files exist in the package folders.
+          </div>
+        </section>
+      </article>
+
+      <!-- Errors -->
+      <article class="page" id="page-errors">
+        <header class="page-header">
+          <h2>Error &amp; Exception Handling</h2>
+          <p>Catching and recovering from runtime errors with try / except / else / finally.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link" href="../error-exception-handling/error_exception_handling.py">error_exception_handling.py</a>
+            <a class="file-link" href="../error-exception-handling/practice.py">practice.py</a>
+            <a class="file-link notebook-link" href="../error-exception-handling/README.md">README.md</a>
+          </div>
+          <h3>try / except / else / finally</h3>
+<pre><code>def ask_for_input():
+    while True:
+        try:
+            number = int(input("Enter number: "))
+        except:
+            print("Not a number, try again")
+            continue
+        else:
+            print(f"Entered number: {number}")
+            break
+        finally:
+            print("Finally executed")</code></pre>
+          <ul>
+            <li><code>try_except()</code> — bare except on invalid addition</li>
+            <li><code>try_except_else()</code> — <code>else</code> runs when no error</li>
+            <li><code>separate_except_blocks()</code> — handlers for <code>TypeError</code>, <code>OSError</code>, etc.</li>
+            <li><code>try_finally()</code> — <code>finally</code> always runs</li>
+            <li><code>ask_for_input()</code> — loop until valid int (default when you run the script)</li>
+          </ul>
+          <p><strong>Run</strong> (from <code>error-exception-handling</code>):</p>
+<pre><code>py error_exception_handling.py
+py practice.py</code></pre>
+        </section>
+      </article>
+
+      <!-- Unit testing -->
+      <article class="page" id="page-unit-testing">
+        <header class="page-header">
+          <h2>Unit Testing</h2>
+          <p>Static analysis with pylint and automated tests with unittest.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link" href="../unit-testing/cap.py">cap.py</a>
+            <a class="file-link" href="../unit-testing/test_cap.py">test_cap.py</a>
+            <a class="file-link notebook-link" href="../unit-testing/README.md">README.md</a>
+          </div>
+          <h3>Code under test</h3>
+<pre><code>def cap_text(text):
+    return text.title()</code></pre>
+          <h3>Test case</h3>
+<pre><code>import unittest
+import cap
+
+class TestCap(unittest.TestCase):
+    def test_one_word(self):
+        self.assertEqual(cap.cap_text("python"), "Python")
+
+    def test_multiple_words(self):
+        self.assertEqual(cap.cap_text("python hello world"), "Python Hello World")
+
+if __name__ == "__main__":
+    unittest.main()</code></pre>
+          <p><strong>Run</strong> (from <code>unit-testing</code>):</p>
+<pre><code>py test_cap.py
+py -m unittest test_cap -v
+py -m pylint cap.py</code></pre>
+        </section>
+      </article>
+
+      <!-- Decorators -->
+      <article class="page" id="page-decorators">
+        <header class="page-header">
+          <h2>Decorators</h2>
+          <p>Add behavior around functions — similar to annotations in Java. Useful for logging, auth, timing, and more.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link" href="../decorators/decorators.py">decorators.py</a>
+            <a class="file-link notebook-link" href="../decorators/README.md">README.md</a>
+          </div>
+          <h3>Functions as first-class objects</h3>
+<pre><code>def function1():
+    return "method1"
+
+myFunction1 = function1
+print(function1())    # method1
+print(myFunction1())  # method1</code></pre>
+          <h3>Manual decorator</h3>
+<pre><code>def decorator1(my_func):
+    def wrap_func():
+        print("Some extra code before original function")
+        my_func()
+        print("Some extra code after original function")
+    return wrap_func
+
+def function4():
+    print("Inside function4")
+
+decorated_function = decorator1(function4)
+decorated_function()</code></pre>
+          <h3><code>@</code> syntax</h3>
+<pre><code>@decorator1
+def function5():
+    print("Inside function5")
+
+function5()</code></pre>
+          <p><strong>Run</strong> (from <code>decorators</code>):</p>
+<pre><code>py decorators.py</code></pre>
+        </section>
+      </article>
+
+      <!-- Main function -->
+      <article class="page" id="page-main-function">
+        <header class="page-header">
+          <h2>Main Function</h2>
+          <p>How <code>if __name__ == "__main__"</code> controls what runs on import vs direct execution.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link" href="../main_function.py">main_function.py</a>
+            <a class="file-link" href="../main_function_2.py">main_function_2.py</a>
+            <a class="file-link notebook-link" href="../main-function.md">main-function.md</a>
+          </div>
+          <h3>Direct run</h3>
+<pre><code># main_function.py
+print("__name__: ", __name__)
+print("Hello world")
+
+def method1():
+    print("method1")
+
+if __name__ == "__main__":
+    print("Running main function")
+    method1()</code></pre>
+<pre><code>py main_function.py
+# __name__:  __main__
+# Hello world
+# Running main function
+# method1</code></pre>
+          <h3>Imported by another module</h3>
+          <p><code>main_function_2.py</code> imports methods from <code>main_function.py</code>. Top-level prints in the imported module still run; the <code>if __name__ == "__main__"</code> block does not.</p>
+<pre><code>py main_function_2.py
+# __name__:  main_function
+# Hello world
+# __name__:  __main__
+# Hello world 2
+# Running main function2
+# ...</code></pre>
+        </section>
+      </article>
+
+      <!-- PyPI -->
+      <article class="page" id="page-pypi">
+        <header class="page-header">
+          <h2>PyPI &amp; Packages</h2>
+          <p>Installing and exploring packages from the Python Package Index.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link notebook-link" href="../pypi-python-package-index.ipynb">pypi-python-package-index.ipynb</a>
+            <a class="file-link notebook-link" href="../colorama-package.png">colorama package</a>
+          </div>
+          <ul class="ext-links">
+            <li><a href="https://pypi.org/" target="_blank" rel="noopener">pypi.org</a></li>
+            <li><a href="https://python-poetry.org/docs/" target="_blank" rel="noopener">Poetry docs</a> for project dependency management</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Practice sites -->
+      <article class="page" id="page-practice-sites">
+        <header class="page-header">
+          <h2>Practice Sites</h2>
+          <p>External sites for ongoing coding practice.</p>
+        </header>
+        <section class="section">
+          <ul class="ext-links">
+            <li><a href="http://codingbat.com/python" target="_blank" rel="noopener">CodingBat</a> — basic practice</li>
+            <li><a href="https://projecteuler.net/archives" target="_blank" rel="noopener">Project Euler</a> — mathematical challenges</li>
+            <li><a href="http://www.codeabbey.com/index/task_list" target="_blank" rel="noopener">CodeAbbey</a> — problem list</li>
+            <li><a href="https://www.reddit.com/r/dailyprogrammer" target="_blank" rel="noopener">r/dailyprogrammer</a> — daily practice</li>
+            <li><a href="http://www.pythonchallenge.com/" target="_blank" rel="noopener">Python Challenge</a> — advanced / puzzle-style</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Labs -->
+      <article class="page" id="page-labs">
+        <header class="page-header">
+          <h2>No-Install Labs</h2>
+          <p>Run Python in the browser without a local install.</p>
+        </header>
+        <section class="section">
+          <ul class="ext-links">
+            <li><a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a></li>
+            <li><a href="https://jupyter.org/try" target="_blank" rel="noopener">Try Jupyter</a></li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- POCs -->
+      <article class="page" id="page-pocs">
+        <header class="page-header">
+          <h2>POCs Todo</h2>
+          <p>Ideas for future proof-of-concept work.</p>
+        </header>
+        <section class="section">
+          <ul>
+            <li>Connect to MySQL database</li>
+            <li>Connect to Oracle database</li>
+            <li>Connect to Redis</li>
+            <li>Connect to Kafka</li>
+            <li>Write REST APIs using FastAPI</li>
+            <li>REST API client</li>
+            <li>Unit testing</li>
+          </ul>
+          <p>List source: <a href="../pocs.md">pocs.md</a></p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

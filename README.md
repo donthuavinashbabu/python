@@ -1,5 +1,46 @@
 # Welcome to Python
+* **Live docs (GitHub Pages):** [https://donthuavinashbabu.github.io/python/](https://donthuavinashbabu.github.io/python/)
+* Local docs: open [docs/index.html](docs/index.html) in a browser
+
+### Enable GitHub Pages (one-time)
+1. Push this repo to GitHub
+2. **Settings → Pages → Build and deployment**
+3. Source: **Deploy from a branch**
+4. Branch: **main**, folder: **/docs** → Save
+5. After a minute, open `https://donthuavinashbabu.github.io/python/`
+
+> GitHub’s file browser does not render HTML. Use Pages (above) to view the documentation site.
+
+---
+
+## Documentation TOC
+
+Mirrors the [HTML docs](docs/index.html) menu. Browse topics on GitHub via the links below.
+
+### Start
 * [Materials](materials.md)
+* [Notes](notes.md)
+* [Virtual Environments](virtual-environments.md)
+* [Udemy bootcamp notes](Udemy-The-Complete-Python-Bootcamp-From-Zero-to-Hero-in-Python.md)
+
+### Topics
+* [Practice 1](practice_001.ipynb)
+* [File IO](fileIO.ipynb)
+* [Methods and Functions](methodsFunctions.ipynb)
+* [OOP Concepts](oop.ipynb)
+* [Packages and Modules](packages-modules/README.md)
+* [Error and Exception Handling](error-exception-handling/README.md)
+* [Unit Testing](unit-testing/README.md)
+* [Decorators](decorators/README.md)
+* [Main Function](main-function.md)
+* [Python Package Index](pypi-python-package-index.ipynb)
+* [colorama package](colorama-package.png)
+
+### More
+* [Practice sites](#practice)
+* [No-install labs](#no-install-python-labs)
+* [POCs](pocs.md)
+
 ---
 # Notes
 * [Notes](notes.md)
@@ -20,6 +61,7 @@
 ---
 ## Example and Practice
 * [Practice 1](practice_001.ipynb)
+* [File IO](fileIO.ipynb)
 * [Methods and Functions](methodsFunctions.ipynb)
 * [Oops concepts](oop.ipynb)
 * [Python Package Index](pypi-python-package-index.ipynb)

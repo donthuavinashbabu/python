@@ -26,6 +26,8 @@ Notes and runnable examples for Python decorators.
 
 ```
 C:\MyPC\personal\github\python\decorators>py decorators.py
+C:\MyPC\personal\github\python\decorators>python decorators.py
+C:\MyPC\personal\github\python\decorators>uv run decorators.py
 ```
 
 **Output:**
