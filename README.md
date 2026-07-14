@@ -1,2 +1,2 @@
 # Welcome to Python
-* <a href="https://donthuavinashbabu.github.io/python/" target="_blank" rel="noopener">Documentation</a>
+* [Documentation](https://donthuavinashbabu.github.io/python/) (Ctrl+click / Cmd+click to open in a new tab)
