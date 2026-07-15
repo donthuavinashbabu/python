@@ -100,7 +100,7 @@
             </div>
             <div class="card">
               <a href="#fastapi" class="goto" data-page="fastapi">FastAPI</a>
-              <p>REST endpoints with Pydantic models.</p>
+              <p>REST APIs, path/query params, Pydantic models.</p>
             </div>
             <div class="card">
               <a href="#virtual-environments" class="goto" data-page="virtual-environments">Virtual Env</a>
@@ -616,7 +616,7 @@ print(Fore.GREEN + "Some text in green color")</code></pre>
       <article class="page" id="page-fastapi">
         <header class="page-header">
           <h2>FastAPI Practice</h2>
-          <p>Small FastAPI app with GET/POST endpoints, plain and Pydantic models, plus a Postman collection.</p>
+          <p>Small FastAPI app with GET/POST endpoints, path and query parameters, plain and Pydantic models, plus a Postman collection.</p>
         </header>
         <section class="section">
           <div class="file-links">
@@ -654,12 +654,22 @@ py main.py</code></pre>
               <tr>
                 <td><code>GET</code></td>
                 <td><code>/employees</code></td>
-                <td>Sample <code>Employee</code> (Pydantic) JSON</td>
+                <td>Sample <code>Employee</code> (Pydantic) JSON — <code>get_employees()</code></td>
               </tr>
               <tr>
                 <td><code>POST</code></td>
                 <td><code>/employees</code></td>
                 <td>Accepts JSON body → returns <code>Employee</code></td>
+              </tr>
+              <tr>
+                <td><code>GET</code></td>
+                <td><code>/name/{name}</code></td>
+                <td>Path parameter — returns <code>"Hello {name}"</code></td>
+              </tr>
+              <tr>
+                <td><code>GET</code></td>
+                <td><code>/employee?name=&amp;position=</code></td>
+                <td>Query parameters — builds and returns <code>Employee</code></td>
               </tr>
             </tbody>
           </table>
@@ -677,6 +687,18 @@ class Employee(BaseModel):
             <code>Student</code> is a regular class; <code>Employee</code> uses Pydantic <code>BaseModel</code> so FastAPI can validate request/response bodies.
           </div>
 
+          <h3>Path parameters</h3>
+<pre><code>@app.get("/name/{name}", response_model=str)
+async def path_parameters(name: str) -> str:
+    return f"Hello {name}"</code></pre>
+          <p>Example: <code>GET /name/Avinash</code> → <code>"Hello Avinash"</code></p>
+
+          <h3>Query parameters</h3>
+<pre><code>@app.get("/employee", response_model=Employee)
+async def query_parameters(name: str, position: str) -> Employee:
+    return Employee(name=name, position=position)</code></pre>
+          <p>Example: <code>GET /employee?name=Jane&amp;position=Engineer</code> → Employee JSON</p>
+
           <h3>Example app code</h3>
 <pre><code>from fastapi import FastAPI
 from models.models import Student, Employee
@@ -688,15 +710,26 @@ async def root():
     return {"message": "Hello World"}
 
 @app.get("/employees", response_model=Employee)
-def employee() -> Employee:
+def get_employees() -> Employee:
     return Employee(name="Jane Smith", position="Software Engineer")
 
 @app.post("/employees", response_model=Employee)
 def create_employee(employee: Employee) -> Employee:
-    return employee</code></pre>
+    return employee
+
+@app.get("/name/{name}", response_model=str)
+async def path_parameters(name: str) -> str:
+    return f"Hello {name}"
+
+@app.get("/employee", response_model=Employee)
+async def query_parameters(name: str, position: str) -> Employee:
+    return Employee(name=name, position=position)</code></pre>
 
           <h3>Postman</h3>
           <p>Import <a href="../fast-api-practice/postman/fast-api-practice.json">fast-api-practice.json</a> into Postman to call the local endpoints (including Swagger docs).</p>
+          <div class="note">
+            The checked-in Postman collection currently covers <code>/</code>, <code>/students</code>, <code>/employees</code> (GET/POST), and docs URLs. Add requests for <code>/name/{name}</code> and <code>/employee</code> if you want those in Postman too.
+          </div>
         </section>
       </article>
 

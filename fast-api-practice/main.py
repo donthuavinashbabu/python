@@ -15,7 +15,7 @@ async def student():
     return {"student": str(student)}
 
 @app.get("/employees", response_model=Employee)
-def employee() -> Employee:
+def get_employees() -> Employee:
     employee = Employee(name="Jane Smith", position="Software Engineer")
     return employee
 
@@ -23,6 +23,16 @@ def employee() -> Employee:
 @app.post("/employees", response_model=Employee)
 def create_employee(employee: Employee) -> Employee:
     return employee
+
+# path parameters
+@app.get("/name/{name}", response_model=str)
+async def path_parameters(name: str) -> str:
+    return f"Hello {name}"
+
+# query parameters
+@app.get("/employee", response_model=Employee)
+async def query_parameters(name: str, position: str) -> Employee:
+    return Employee(name=name, position=position)
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
