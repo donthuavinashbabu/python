@@ -46,6 +46,7 @@
             <li><a href="#main-function" class="nav-link" data-page="main-function">Main Function</a></li>
             <li><a href="#pypi" class="nav-link" data-page="pypi">PyPI &amp; Packages</a></li>
             <li><a href="#colorama" class="nav-link" data-page="colorama">Colorama Package</a></li>
+            <li><a href="#fastapi" class="nav-link" data-page="fastapi">FastAPI Practice</a></li>
           </ul>
         </div>
 
@@ -98,6 +99,10 @@
               <p>File IO, OOP, methods, and more.</p>
             </div>
             <div class="card">
+              <a href="#fastapi" class="goto" data-page="fastapi">FastAPI</a>
+              <p>REST endpoints with Pydantic models.</p>
+            </div>
+            <div class="card">
               <a href="#virtual-environments" class="goto" data-page="virtual-environments">Virtual Env</a>
               <p>venv, virtualenv, Poetry, and uv.</p>
             </div>
@@ -114,6 +119,7 @@
             <a class="file-link" href="../main_function.py">main_function.py</a>
             <a class="file-link notebook-link" href="../fileIO.ipynb">fileIO.ipynb</a>
             <a class="file-link notebook-link" href="../oop.ipynb">oop.ipynb</a>
+            <a class="file-link" href="../fast-api-practice/main.py">fast-api-practice/main.py</a>
           </div>
         </section>
       </article>
@@ -154,6 +160,7 @@
           <h3>FastAPI &amp; Poetry</h3>
           <ul class="ext-links">
             <li><a href="https://www.tutorialspoint.com/fastapi/index.htm" target="_blank" rel="noopener">TutorialsPoint — FastAPI</a></li>
+            <li><a href="#fastapi" class="goto" data-page="fastapi">FastAPI practice in this repo</a></li>
             <li><a href="https://python-poetry.org/docs/" target="_blank" rel="noopener">Poetry documentation</a></li>
           </ul>
         </section>
@@ -605,6 +612,94 @@ print(Fore.GREEN + "Some text in green color")</code></pre>
         </section>
       </article>
 
+      <!-- FastAPI Practice -->
+      <article class="page" id="page-fastapi">
+        <header class="page-header">
+          <h2>FastAPI Practice</h2>
+          <p>Small FastAPI app with GET/POST endpoints, plain and Pydantic models, plus a Postman collection.</p>
+        </header>
+        <section class="section">
+          <div class="file-links">
+            <a class="file-link" href="../fast-api-practice/main.py">main.py</a>
+            <a class="file-link" href="../fast-api-practice/models/models.py">models/models.py</a>
+            <a class="file-link notebook-link" href="../fast-api-practice/postman/fast-api-practice.json">postman/fast-api-practice.json</a>
+          </div>
+
+          <h3>Run</h3>
+<pre><code>cd fast-api-practice
+pip install fastapi uvicorn
+py main.py</code></pre>
+          <p>Server starts at <code>http://127.0.0.1:8000</code> with auto-reload. Interactive docs: <a href="http://127.0.0.1:8000/docs" target="_blank" rel="noopener">/docs</a> (Swagger UI).</p>
+
+          <h3>Endpoints</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Path</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>GET</code></td>
+                <td><code>/</code></td>
+                <td>Hello World JSON</td>
+              </tr>
+              <tr>
+                <td><code>GET</code></td>
+                <td><code>/students</code></td>
+                <td>Sample <code>Student</code> (plain class) as string</td>
+              </tr>
+              <tr>
+                <td><code>GET</code></td>
+                <td><code>/employees</code></td>
+                <td>Sample <code>Employee</code> (Pydantic) JSON</td>
+              </tr>
+              <tr>
+                <td><code>POST</code></td>
+                <td><code>/employees</code></td>
+                <td>Accepts JSON body → returns <code>Employee</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Models</h3>
+<pre><code>class Student():
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+
+class Employee(BaseModel):
+    name: str
+    position: str</code></pre>
+          <div class="note">
+            <code>Student</code> is a regular class; <code>Employee</code> uses Pydantic <code>BaseModel</code> so FastAPI can validate request/response bodies.
+          </div>
+
+          <h3>Example app code</h3>
+<pre><code>from fastapi import FastAPI
+from models.models import Student, Employee
+
+app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+@app.get("/employees", response_model=Employee)
+def employee() -> Employee:
+    return Employee(name="Jane Smith", position="Software Engineer")
+
+@app.post("/employees", response_model=Employee)
+def create_employee(employee: Employee) -> Employee:
+    return employee</code></pre>
+
+          <h3>Postman</h3>
+          <p>Import <a href="../fast-api-practice/postman/fast-api-practice.json">fast-api-practice.json</a> into Postman to call the local endpoints (including Swagger docs).</p>
+        </section>
+      </article>
+
       <!-- Practice sites -->
       <article class="page" id="page-practice-sites">
         <header class="page-header">
@@ -648,7 +743,9 @@ print(Fore.GREEN + "Some text in green color")</code></pre>
             <li>Connect to Oracle database</li>
             <li>Connect to Redis</li>
             <li>Connect to Kafka</li>
-            <li>Write REST APIs using FastAPI</li>
+            <li>Write REST APIs using FastAPI —
+              <a href="#fastapi" class="goto" data-page="fastapi">started in <code>fast-api-practice</code></a>
+            </li>
             <li>REST API client</li>
             <li>Unit testing</li>
           </ul>
